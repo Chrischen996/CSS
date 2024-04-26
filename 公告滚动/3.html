@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .notice{
+            width: 600px;
+            height: 40px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        .notice__inner{
+            height: 100%;
+            font-size: 14px;
+            color: #333;
+            line-height: 40px;
+            white-space: nowrap;
+            position: relative;
+        }
+        .notice__item{
+            position: absolute;
+            top: 0;
+            left: 100%;
+            height: 100%;
+        }
+        .notice__item-first{
+            padding-right: 70%;
+            animation: rollFirst 25s linear infinite;
+        }
+        .notice__item-second{
+            padding-right: 53%;
+            animation: rollSecond 25s linear 12s infinite;
+        }
+        @keyframes rollFirst {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-200%);
+            }
+        }
+        @keyframes rollSecond {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-200%);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="notice">
+    <div class="notice__inner">
+        <span class="notice__item notice__item-first">Vue是一个渐进式的 JavaScript 框架</span>
+        <span class="notice__item notice__item-second">Vue是一个渐进式的 JavaScript 框架</span>
+    </div>
+</div>
+</body>
+</html>
